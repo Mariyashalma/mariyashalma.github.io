@@ -3,15 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mariya Jeya Shalma</title>
-<meta name="description" content="Data scientist and AI engineer. Statistical modelling, machine learning, document OCR, chatbots and compliance tools on Azure for finance, insurance and compliance teams.">
+<title>Mariya Jeya Shalma | AI automation for finance, insurance and compliance</title>
+<meta name="description" content="AI automation for document-heavy finance, insurance and compliance workflows: document processing, information retrieval, reporting and decision support.">
+<link rel="canonical" href="https://mariyashalma.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mariyashalma.github.io/">
+<meta property="og:title" content="Mariya Jeya Shalma | AI automation for finance, insurance and compliance">
+<meta property="og:description" content="AI automation for document-heavy finance, insurance and compliance workflows: document processing, information retrieval, reporting and decision support.">
+<meta property="og:image" content="https://mariyashalma.github.io/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='1' y='1' width='26' height='26' rx='8' fill='%238C1D40'/%3E%3Ccircle cx='9' cy='9' r='2.4' fill='%23fff'/%3E%3Ccircle cx='9' cy='19' r='2.4' fill='%23fff'/%3E%3Ccircle cx='19' cy='14' r='3.2' fill='%23fff'/%3E%3Cpath d='M10.8 9.8l6 3.2M10.8 18.2l6-3.2' stroke='%23fff' stroke-width='1.4'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Tamil:wght@400;500;600&display=swap">
 <style>
 :root{
   --bg:#F6F7F9; --panel:#FFFFFF; --panel-2:#EEF0F4; --glass:rgba(246,247,249,.78);
-  --ink:#0D1117; --ink-2:#2A303B; --muted:#5B6272; --faint:#8A90A0; --line:#E3E6EC;
+  --ink:#0D1117; --ink-2:#2A303B; --muted:#5B6272; --faint:#646B7A; --line:#E3E6EC;
   --acc:#8C1D40; --acc-ink:#74163A; --acc-soft:#F5E0E7; --on-acc:#FFFFFF;
   --good:#12A150; --good-soft:#DDF5E7;
   --shadow:0 1px 2px rgba(13,17,23,.06), 0 12px 32px -12px rgba(13,17,23,.18);
@@ -28,7 +36,7 @@
   :root:not([data-theme="light"]){
     color-scheme:dark;
     --bg:#0B0D11; --panel:#12151B; --panel-2:#1A1E26; --glass:rgba(11,13,17,.78);
-    --ink:#EEF1F5; --ink-2:#C9CFD9; --muted:#9097A6; --faint:#646B7A; --line:#252A33;
+    --ink:#EEF1F5; --ink-2:#C9CFD9; --muted:#9097A6; --faint:#939AA9; --line:#252A33;
     --acc:#E0668C; --acc-ink:#F08FAB; --acc-soft:#3A1522; --on-acc:#1F0610;
     --good:#3DD68C; --good-soft:#123222;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 16px 40px -14px rgba(0,0,0,.7);
@@ -40,7 +48,7 @@
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#0B0D11; --panel:#12151B; --panel-2:#1A1E26; --glass:rgba(11,13,17,.78);
-  --ink:#EEF1F5; --ink-2:#C9CFD9; --muted:#9097A6; --faint:#646B7A; --line:#252A33;
+  --ink:#EEF1F5; --ink-2:#C9CFD9; --muted:#9097A6; --faint:#939AA9; --line:#252A33;
   --acc:#E0668C; --acc-ink:#F08FAB; --acc-soft:#3A1522; --on-acc:#1F0610;
   --good:#3DD68C; --good-soft:#123222;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 16px 40px -14px rgba(0,0,0,.7);
@@ -82,7 +90,17 @@ section{padding-block:clamp(72px,10vw,128px)}
 .links a{display:block; padding:8px 14px; border-radius:999px; font-size:.93rem; font-weight:500; color:var(--muted); transition:color .2s, background .2s}
 .links a:hover{color:var(--ink); background:var(--panel-2)}
 .links a.on{color:var(--ink)}
-@media (max-width:860px){ .links{display:none} }
+.icon-btn.menu-btn{display:none}
+.only-menu{display:none}
+@media (max-width:860px){
+  .icon-btn.menu-btn{display:grid}
+  .btn.nav-cta{display:none}
+  .only-menu{display:block}
+  .links{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; padding:8px 16px 16px; background:var(--bg); border-bottom:1px solid var(--line); box-shadow:var(--shadow)}
+  .links.open{display:flex}
+  .links a{padding:13px 10px; border-radius:10px; font-size:1rem}
+  .links .only-menu a{margin-top:6px; background:var(--ink); color:var(--bg); text-align:center}
+}
 @media (max-width:420px){ .brand span{display:none} }
 .nav-r{display:flex; gap:8px; align-items:center}
 .icon-btn{width:40px; height:40px; border-radius:999px; border:1px solid var(--line); background:var(--panel); color:var(--muted); display:grid; place-items:center; cursor:pointer}
@@ -105,7 +123,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 .hero{padding-block:clamp(28px,5vw,56px) clamp(40px,6vw,72px); position:relative; overflow:hidden; background:linear-gradient(90deg, var(--bg) 0%, var(--bg) 36%, color-mix(in srgb, var(--bg) 55%, transparent) 56%, color-mix(in srgb, var(--bg) 6%, transparent) 100%)}
 .hero-grid{display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:24px; align-items:center}
 @media (max-width:980px){ .hero-grid{grid-template-columns:1fr} }
-.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem); letter-spacing:-.04em; line-height:1}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.6rem); letter-spacing:-.04em; line-height:1}
 .hero h1 em.s{color:var(--acc)}
 .hero .who{display:flex; align-items:center; gap:12px; margin-bottom:26px; font-size:.95rem}
 .hero .who img{width:56px; height:56px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px var(--panel), var(--shadow)}
@@ -425,7 +443,7 @@ section{padding-block:clamp(72px,10vw,128px)}
 @keyframes travel{from{left:-120px}to{left:100%}}
 .fs{position:relative; display:grid; gap:10px; align-content:start}
 .fs .dot{width:44px; height:44px; border-radius:50%; background:var(--panel); border:2px solid var(--ink); display:grid; place-items:center; font-family:var(--f-mono); font-size:.8rem; color:var(--ink); font-weight:500; position:relative; z-index:1}
-.fs h4{font-size:1.1rem}
+.fs h3{font-size:1.1rem}
 .fs p{font-size:.92rem}
 .fs .when{font-family:var(--f-mono); font-size:.72rem; color:var(--acc-ink)}
 .rules{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:56px}
@@ -477,6 +495,45 @@ section{padding-block:clamp(72px,10vw,128px)}
 .facts h4{font-family:var(--f-mono); font-size:.72rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin-bottom:12px}
 .facts p{font-size:.9rem; margin-bottom:12px}
 .facts p b{color:var(--ink)}
+
+/* ---------- client-conversion sections ---------- */
+.trust-note{margin-top:26px; font-size:.86rem; color:var(--muted); max-width:46ch; padding-left:14px; border-left:2px solid var(--acc)}
+.motion-btn{position:absolute; left:12px; bottom:10px; font-family:var(--f-mono); font-size:.7rem; color:var(--ink); background:color-mix(in srgb, var(--panel) 88%, transparent); border:1px solid var(--line); border-radius:999px; height:30px; padding:0 12px; cursor:pointer}
+.motion-btn:hover{border-color:var(--ink)}
+html.paused .beam, html.paused .pop.float, html.paused .flow-line i, html.paused .brand .pulse{animation-play-state:paused}
+.problems,.services{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+@media (max-width:900px){ .problems,.services{grid-template-columns:1fr} }
+.prob{background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:24px; display:grid; gap:10px; align-content:start}
+.prob .ico{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--acc-soft); color:var(--acc-ink)}
+.prob .ico svg{width:22px; height:22px}
+.prob h3{font-size:1.15rem; letter-spacing:-.015em}
+.prob p{font-size:.95rem}
+.aside{margin-top:20px; font-size:.95rem; max-width:70ch}
+.svc{background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:26px; display:grid; gap:12px; align-content:start}
+.svc .step-n{font-family:var(--f-mono); font-size:.76rem; color:var(--acc-ink)}
+.svc h3{font-size:1.3rem}
+.svc ul{list-style:none; margin:4px 0 0; padding:0; display:grid; gap:10px; font-size:.95rem}
+.svc li{display:grid; grid-template-columns:18px 1fr; gap:10px}
+.svc li svg{width:18px; height:18px; margin-top:3px; color:var(--acc)}
+.cases{display:grid; gap:16px}
+.case{background:var(--panel); border:1px solid var(--line); border-radius:22px; padding:clamp(20px,3vw,32px); display:grid; grid-template-columns:minmax(0,.42fr) minmax(0,1fr); gap:clamp(16px,3vw,40px)}
+@media (max-width:820px){ .case{grid-template-columns:1fr} }
+.case-head{display:grid; gap:10px; align-content:start}
+.case .k{font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--acc-ink)}
+.case h3{font-size:clamp(1.35rem,2.4vw,1.7rem)}
+.case-demo{justify-self:start; font-weight:600; font-size:.92rem; color:var(--ink); border-bottom:1px solid var(--line); padding-bottom:2px}
+.case-demo:hover{color:var(--acc-ink); border-color:var(--acc)}
+.case dl{margin:0; display:grid; gap:0}
+.case dl div{display:grid; grid-template-columns:140px minmax(0,1fr); gap:16px; padding:11px 0; border-top:1px solid var(--line)}
+.case dl div:first-child{border-top:0; padding-top:0}
+@media (max-width:560px){ .case dl div{grid-template-columns:1fr; gap:2px} }
+.case dt{font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); padding-top:3px}
+.case dd{margin:0; font-size:.95rem; color:var(--ink-2)}
+.flow.five{grid-template-columns:repeat(5,1fr)}
+@media (max-width:980px){ .flow.five{grid-template-columns:1fr 1fr} .flow.five .flow-line{display:none} }
+@media (max-width:520px){ .flow.five{grid-template-columns:1fr} }
+.fld .opt{font-weight:400; color:var(--faint)}
+.privacy{margin:0; font-size:.78rem; line-height:1.5; color:var(--muted)}
 
 /* ---------- faq + contact ---------- */
 .faq{max-width:860px; border-top:1px solid var(--line); margin-top:12px}
@@ -546,15 +603,17 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
       <span>Mariya Jeya Shalma</span>
     </a>
     <nav aria-label="Sections"><ul class="links" id="links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Selected work</a></li>
       <li><a href="#lab">Demos</a></li>
-      <li><a href="#ds">Data science</a></li>
-      <li><a href="#builds">Client work</a></li>
-      <li><a href="#process">How I work</a></li>
+      <li><a href="#process">Process</a></li>
       <li><a href="#about">About</a></li>
+      <li class="only-menu"><a href="#contact">Discuss an automation project</a></li>
     </ul></nav>
     <div class="nav-r">
       <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
-      <a class="btn btn-ink btn-sm mag" href="#contact">Book a call</a>
+      <a class="btn btn-ink btn-sm mag nav-cta" href="#contact">Discuss an automation project</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
@@ -565,13 +624,14 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
   <div class="wrap hero-grid">
     <div>
       <span class="kicker" style="margin-bottom:22px">Data Scientist &amp; AI Engineer</span>
-      <h1 class="split" id="h1">Data science and AI for finance, insurance and <em class="s">compliance</em>.</h1>
-      <p class="lede">I build software that reads documents, answers questions and analyses data, for banks, insurers and compliance teams.</p>
+      <h1 class="split" id="h1">Turn document-heavy workflows into <em class="s">practical AI automation</em>.</h1>
+      <p class="lede">I design and build AI-powered tools for finance, insurance and compliance teams, from document processing and information retrieval to reporting workflows and decision support.</p>
       <div class="cta">
-        <a class="btn btn-acc mag" href="#contact">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line mag" href="#lab">See the demos</a>
+        <a class="btn btn-acc mag" href="#contact">Discuss an automation project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line mag" href="#work">Explore selected work</a>
       </div>
-      <span class="live"><i></i>Available for projects · IST, overlaps EU mornings</span>
+      <p class="trust-note">Practical demos use synthetic sample data. Client details are kept confidential.</p>
+      <span class="live"><i></i>Available for freelance projects · remote, overlaps EU mornings</span>
     </div>
     <div class="stage" id="stage">
       <div class="scene" id="scene">
@@ -582,16 +642,85 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
           <div class="base"></div>
         </div>
       </div>
+      <button class="motion-btn" id="motionBtn" type="button" aria-pressed="false">Pause animation</button>
     </div>
   </div>
 </section>
 
-<div class="metrics" id="metrics">
-  <div class="metric"><b data-count="4" data-suffix="+">4<small>+</small></b><span>years working in software and data</span></div>
-  <div class="metric"><b data-count="14">14</b><span>systems delivered for clients</span></div>
-  <div class="metric"><b data-count="19">19</b><span>EU laws made searchable by question</span></div>
-  <div class="metric"><b data-count="8">8</b><span>languages in one compliance app</span></div>
-</div>
+<!-- ================= PROBLEMS ================= -->
+<section class="band" aria-labelledby="problems-h">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">The problem</span>
+      <h2 id="problems-h">Where manual work slows teams down</h2>
+    </div>
+    <div class="problems">
+      <article class="prob rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><h3>Documents that need repeated handling</h3><p>Extracting, checking, classifying and routing information that arrives in many formats.</p></article>
+      <article class="prob rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><h3>Knowledge spread across files and regulations</h3><p>Helping teams find the relevant passage and trace it back to the source material.</p></article>
+      <article class="prob rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3>Reporting that consumes specialist time</h3><p>Turning recurring data preparation and reporting steps into repeatable workflows.</p></article>
+    </div>
+    <p class="aside rv">These are problems I can assess with you. Whether automation is worth it depends on your process and data.</p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">Services</span>
+      <h2>Three places to <em class="s">start</em></h2>
+      <p>Each starts with one defined process and ends with something you can evaluate.</p>
+    </div>
+    <div class="services">
+      <article class="svc rv">
+        <span class="step-n">01</span><h3>AI document workflow</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Assess one document-heavy process.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Prototype extraction, classification, validation or routing.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Define human review and exception handling.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Deliver a demo and a recommended next-step plan.</li>
+        </ul>
+      </article>
+      <article class="svc rv">
+        <span class="step-n">02</span><h3>Compliance and knowledge assistant</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Organise a defined set of approved documents.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Build retrieval and source-grounded answers for a specific workflow.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Include source references and communicate uncertainty.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Evaluate answer quality on an agreed test set.</li>
+        </ul>
+      </article>
+      <article class="svc rv">
+        <span class="step-n">03</span><h3>Reporting and operations automation</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Map a recurring reporting or data-handling process.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Automate suitable preparation and transformation steps.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Add validation checks and exception reporting.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>Document the workflow for handover.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="aside rv">Discovery sometimes shows that conventional software or a change to the process is a better fit than a language model. If so, I'll say that.</p>
+  </div>
+</section>
+
+<!-- ================= SELECTED WORK ================= -->
+<section id="work" class="band">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">Selected work</span>
+      <h2>Three projects, described <em class="s">plainly</em></h2>
+      <p>Client names, data and code are not shown. Each project has a demo you can try below.</p>
+    </div>
+    <div class="cases">
+      <article class="case rv"><div class="case-head"><span class="k">Finance</span><h3>Supplier invoice workflow</h3><a class="case-demo" href="#lab" data-demo="0">See the demo <span aria-hidden="true">→</span></a></div><dl><div><dt>Challenge</dt><dd>Supplier invoices arrived by email and were read, checked and approved by hand before payment.</dd></div><div><dt>My contribution</dt><dd>Design and build of the intake, the extraction step, the review screens and the data model.</dd></div><div><dt>Approach</dt><dd>Invoices are collected from a mailbox and read with document OCR and a language model that must return a fixed structure. They are then checked for duplicates and matched to a supplier before a person approves them.</dd></div><div><dt>Validation</dt><dd>Each extracted field carries a confidence value, duplicates are caught by rule, and a person reviews every invoice before any payment step.</dd></div><div><dt>Outcome</dt><dd>A working review-and-approve workflow in place of manual keying.</dd></div><div><dt>Disclosure</dt><dd>Client work, described in general terms. The demo uses synthetic data.</dd></div></dl></article>
+      <article class="case rv"><div class="case-head"><span class="k">Insurance</span><h3>Accident-claim analysis</h3><a class="case-demo" href="#lab" data-demo="1">See the demo <span aria-hidden="true">→</span></a></div><dl><div><dt>Challenge</dt><dd>Accident declaration forms arrived as PDFs and were typed in by hand before a claim could be assessed.</dd></div><div><dt>My contribution</dt><dd>Design and build of the document pipeline, the rules service and the review app for staff.</dd></div><div><dt>Approach</dt><dd>Forms are split into sections and read with custom OCR models and a language model. A separate rules service, written as ordinary code, works out how responsibility is shared between the parties.</dd></div><div><dt>Validation</dt><dd>Fields the system is unsure about go to a person, and the rules service has an automated test suite. It supports the form templates it was built for.</dd></div><div><dt>Outcome</dt><dd>A pipeline from incoming form to a reviewed claim record with a suggested split of responsibility.</dd></div><div><dt>Disclosure</dt><dd>Client work, described in general terms. The demo uses synthetic data.</dd></div></dl></article>
+      <article class="case rv"><div class="case-head"><span class="k">Compliance</span><h3>Regulation search assistant</h3><a class="case-demo" href="#lab" data-demo="2">See the demo <span aria-hidden="true">→</span></a></div><dl><div><dt>Challenge</dt><dd>Compliance staff need exact answers from long regulations, together with the source article.</dd></div><div><dt>My contribution</dt><dd>Design and build of the collection, indexing and search pipeline.</dd></div><div><dt>Approach</dt><dd>Public EU regulations are split by article, indexed for both meaning-based and keyword search, and tagged by who each article applies to. Answers cite the article they come from.</dd></div><div><dt>Validation</dt><dd>Articles are split and labelled so that every answer can be traced back to the exact article it came from.</dd></div><div><dt>Outcome</dt><dd>A searchable collection of public regulations that returns answers with their source.</dd></div><div><dt>Disclosure</dt><dd>Client work built on public legal texts. The demo uses the public text of GDPR.</dd></div></dl></article>
+    </div>
+    <h3 class="also-h rv">Other delivered work</h3>
+    <p class="aside rv" style="margin-top:8px">Regulatory reporting, a risk and controls application, an approval workflow for AI tools, a software cost register, task and timesheet tools, a report summariser, an e-learning course and a wealth-management application. Details are available on request, within confidentiality limits.</p>
+  </div>
+</section>
 
 <!-- ================= LAB ================= -->
 <section id="lab">
@@ -599,7 +728,7 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
     <div class="head rv">
       <span class="kicker">Demos</span>
       <h2>Six projects you can <em class="s">try</em>.</h2>
-      <p>Four systems built for clients and two language tutors. Pick one to see how it works. All data shown here is made up.</p>
+      <p>Four are based on client systems and two are language tutors. Pick one to see how it works. Every demo runs on synthetic sample data.</p>
     </div>
     <div class="lab">
       <div class="tabs" role="tablist" aria-label="Demos" id="tabs">
@@ -618,7 +747,7 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
 </section>
 
 <!-- ================= DATA SCIENCE ================= -->
-<section id="ds" style="padding-top:0">
+<section id="ds">
   <div class="wrap">
     <div class="head rv">
       <span class="kicker">Data science</span>
@@ -634,64 +763,13 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
         <thead><tr><th scope="col">Project</th><th scope="col">The question</th><th scope="col">Method</th></tr></thead>
         <tbody>
         <tr class="rv"><th scope="row">Player performance<span>Client project</span></th><td>How good is this player, given only a few shots?</td><td>Hierarchical Bayesian model, with a logistic classifier and ridge regression. Shown in demo 04 above.</td></tr>
-        <tr class="rv"><th scope="row">Operational risk<span>Professional</span></th><td>How often do incidents such as fraud happen, and how costly are they?</td><td>Incident classification, then frequency and severity distributions.</td></tr>
-        <tr class="rv"><th scope="row">Disaster prediction<span>ECE Paris</span></th><td>What kind of disaster do incoming readings point to?</td><td>A classifier scoring a live Kafka stream, with a dashboard. About 32,000 records.</td></tr>
-        <tr class="rv"><th scope="row">Review sentiment<span>ECE Paris</span></th><td>Is a customer review positive, neutral or negative?</td><td>CNN and LSTM text classifiers, compared in a small app.</td></tr>
-        <tr class="rv"><th scope="row">Customer churn<span>ECE Paris</span></th><td>Which bank customers are likely to leave?</td><td>Neural network on 10,000 customers. About 78% validation accuracy.</td></tr>
-        <tr class="rv"><th scope="row">Network threats<span>ECE Paris</span></th><td>Is this network traffic an attack?</td><td>Random forest in Spark on Databricks. About 59,000 records.</td></tr>
+        <tr class="rv"><th scope="row">Operational risk<span>Earlier professional work</span></th><td>How often do incidents such as fraud happen, and how costly are they?</td><td>Incident classification, then frequency and severity distributions.</td></tr>
+        <tr class="rv"><th scope="row">Disaster prediction<span>Academic project · ECE Paris</span></th><td>What kind of disaster do incoming readings point to?</td><td>A classifier scoring a live Kafka stream, with a dashboard. About 32,000 records.</td></tr>
+        <tr class="rv"><th scope="row">Review sentiment<span>Academic project · ECE Paris</span></th><td>Is a customer review positive, neutral or negative?</td><td>CNN and LSTM text classifiers, compared in a small app.</td></tr>
+        <tr class="rv"><th scope="row">Customer churn<span>Academic project · ECE Paris</span></th><td>Which bank customers are likely to leave?</td><td>Neural network on a public dataset of 10,000 customers.</td></tr>
+        <tr class="rv"><th scope="row">Network threats<span>Academic project · ECE Paris</span></th><td>Is this network traffic an attack?</td><td>Random forest in Spark on Databricks. About 59,000 records.</td></tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BUILDS ================= -->
-<section id="builds" style="padding-top:0">
-  <div class="wrap">
-    <div class="head rv">
-      <span class="kicker">Client work</span>
-      <h2>Ten more systems built for <em class="s">clients</em>.</h2>
-      <p>Each one is in use or was delivered to a client. Client names, data and code are not shown.</p>
-    </div>
-    <article class="feature rv">
-      <img class="f-img" src="assets/paperwork.jpg" alt="Tax forms, a calculator and a pen on a table" loading="lazy">
-      <div class="f-main">
-        <span class="k">Largest project</span>
-        <h3>A wealth app that shows everything a household owns and owes</h3>
-        <p>Bank accounts, investments, property, loans, insurance and pension in one place.</p>
-        <ul class="f-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span><b>Reads paper contracts.</b> Upload a loan contract or property deed, and the app fills in the amounts, rates and dates.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span><b>Connects to banks safely.</b> Balances and transactions come in read-only, and the app never sees a bank password.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span><b>Official sign-in.</b> Users sign in with their national e-ID and can fetch their tax documents.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span><b>Calculators</b> for loans, insurance, inheritance and tax.</span></li>
-        </ul>
-        <ul class="chips"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Azure OpenAI</li><li>React</li></ul>
-      </div>
-      <div class="f-stats">
-        <div><b>~37</b><span>screens</span></div>
-        <div><b>~60</b><span>server functions</span></div>
-        <div><b>2</b><span>languages: English and French</span></div>
-      </div>
-    </article>
-    <div class="builds">
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="k">Compliance</span></div><h3>Regulator reports</h3><p>Produces the reports that financial regulators require, such as the DORA register and the yearly complaints return, as ready-to-submit Excel and PDF files.</p><ul class="chips"><li>Node.js</li><li>Excel and PDF output</li><li>Azure</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="k">Compliance</span></div><h3>Risk and controls app</h3><p>A web app where a company records its risks, controls and incidents. It works in 8 languages, and each role sees only what it is allowed to.</p><ul class="chips"><li>React</li><li>TypeScript</li><li>Azure SQL</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><span class="k">AI governance</span></div><h3>AI tool approval</h3><p>Helps a security office review a new AI tool before approving it, with questionnaires, evidence and a recorded decision. Approval is blocked when a legal red flag appears.</p><ul class="chips"><li>Node.js</li><li>PostgreSQL</li><li>Azure OpenAI</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg></span><span class="k">Internal tool</span></div><h3>Software cost register</h3><p>A register of the software a company pays for, with owners, renewal dates and costs. It reads invoices with AI.</p><ul class="chips"><li>React</li><li>Azure Functions</li><li>PostgreSQL</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2 2 4-4"/></svg></span><span class="k">Internal tool</span></div><h3>Tasks and timesheets</h3><p>Tasks, timesheets and project budgets for a consultancy, with exports to PowerPoint and Excel.</p><ul class="chips"><li>React</li><li>Supabase</li><li>PostgreSQL</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="k">Automation</span></div><h3>Report summariser</h3><p>Email it a long PDF report and it replies with a summary, a diagram and an audio version.</p><ul class="chips"><li>Azure Functions</li><li>Azure OpenAI</li><li>Azure Speech</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M7 9.5V15c0 1.5 2.2 3 5 3s5-1.5 5-3V9.5M21 7v6"/></svg></span><span class="k">E-learning</span></div><h3>AI prompting course</h3><p>An online course on writing AI prompts, in English, French and Dutch, with video, quizzes and a final test.</p><ul class="chips"><li>React</li><li>3 languages</li><li>LMS package</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="k">Automation</span></div><h3>Daily job search</h3><p>Searches 64 job sites every day and emails a clean list of matching roles each evening, with duplicates removed.</p><ul class="chips"><li>Python</li><li>Azure Functions</li><li>Web scraping</li></ul></article>
-      <article class="card rv"><span class="glare"></span><div class="top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2-2v6h-6l2-2a5 5 0 0 0-9 3M20 12a8 8 0 0 1-14 5l-2 2v-6h6l-2 2a5 5 0 0 0 9-3"/></svg></span><span class="k">Automation</span></div><h3>Calendar sync</h3><p>Kept the calendars of three organisations in sync and told people what had changed.</p><ul class="chips"><li>Python</li><li>Azure Functions</li><li>Microsoft 365</li></ul></article>
-    </div>
-    <h3 class="also-h rv">Smaller and personal projects</h3>
-    <div class="also rv">
-      <div><b>Fire-safety inspections</b><span>Inspectors scan a QR code on each extinguisher and log the check. Web app plus three Android apps.</span></div>
-      <div><b>Education-loan tracker</b><span>Follows each student's loan application from start to payout.</span></div>
-      <div><b>QR gift system for an education fair</b><span>Students register by phone and claim one gift each with a QR code.</span></div>
-      <div><b>Thirukkural database</b><span>All 1,330 couplets, searchable in Tamil or English.</span></div>
-      <div><b>Power BI dashboards</b><span>Management dashboards and automated daily reports for a bank.</span></div>
-      <div><b>Workflow automation</b><span>n8n flows that summarise reports and create tasks automatically.</span></div>
     </div>
   </div>
 </section>
@@ -701,24 +779,26 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
   <div class="wrap">
     <div class="head-split">
       <div class="head rv">
-        <span class="kicker">How I work</span>
-        <h2>A working demo <em class="s">every week</em>.</h2>
-        <p>Four steps, from the first call to handover.</p>
+        <span class="kicker">Process</span>
+        <h2>From first conversation to <em class="s">handover</em></h2>
+        <p>Five steps, starting with the smallest useful deliverable.</p>
       </div>
       <figure class="pic rv"><img src="assets/code.jpg" alt="Code on a laptop screen" loading="lazy"></figure>
     </div>
-    <div class="flow rv">
+    <div class="flow five rv">
       <div class="flow-line" aria-hidden="true"><i></i></div>
-      <div class="fs"><span class="dot">01</span><h4>First call</h4><p>A short call about your problem, your data and what "done" means.</p></div>
-      <div class="fs"><span class="dot">02</span><h4>Written plan</h4><p>Within two days: scope, milestones, timeline and risks.</p></div>
-      <div class="fs"><span class="dot">03</span><h4>Build and demo</h4><p>Something working to look at every week.</p></div>
-      <div class="fs"><span class="dot">04</span><h4>Handover</h4><p>Running in your own cloud account, with documentation.</p></div>
+      <div class="fs"><span class="dot">01</span><h3>Discovery</h3><p>Understand the workflow, users, risks, data constraints and current pain.</p></div>
+      <div class="fs"><span class="dot">02</span><h3>Scope</h3><p>Agree the smallest useful deliverable, acceptance criteria and what is out of scope.</p></div>
+      <div class="fs"><span class="dot">03</span><h3>Prototype</h3><p>Build against approved sample or synthetic data first.</p></div>
+      <div class="fs"><span class="dot">04</span><h3>Evaluate</h3><p>Test quality, failure cases, privacy and human review.</p></div>
+      <div class="fs"><span class="dot">05</span><h3>Handover</h3><p>Documentation, known limitations and a recommended next step.</p></div>
     </div>
+    <p class="aside rv">Production deployment is discussed once access, security, data governance and integration requirements are understood.</p>
     <h3 class="also-h rv">Common questions</h3>
     <div class="faq">
       <details><summary>Do you work with clients in Europe?<i></i></summary><p>Yes, most current work is for European clients. India is 3½ to 4½ hours ahead of central Europe, so European mornings overlap with Indian afternoons.</p></details>
-      <details><summary>What happens to our data?<i></i></summary><p>The system runs in your own Azure account, and no passwords or keys are stored in the code. An NDA is fine. Client documents never appear in public demos.</p></details>
-      <details><summary>Is a small project fine?<i></i></summary><p>Yes. One dashboard, one automated workflow or one data analysis is a normal place to start.</p></details>
+      <details><summary>What happens to our data?<i></i></summary><p>Prototypes start on approved sample or synthetic data. No passwords or keys are stored in code, an NDA is fine, and client documents never appear in public demos.</p></details>
+      <details><summary>Is a small project fine?<i></i></summary><p>Yes. One document type, one report or one workflow is a normal place to start.</p></details>
     </div>
   </div>
 </section>
@@ -748,34 +828,35 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" style="padding-top:0">
+<section id="contact">
   <div class="wrap">
     <div class="contact">
       <canvas id="mini" aria-hidden="true"></canvas>
       <div>
-        <h2>Have a system that needs <em class="s">building?</em></h2>
-        <p>Send a message, or email me to book a call. I reply within one working day.</p>
+        <h2>Have a workflow worth <em class="s">improving?</em></h2>
+        <p>Tell me what your team does manually today, where the process gets stuck, and what a useful first improvement would look like. I'll help assess whether AI automation is a sensible fit.</p>
         <div class="reach">
-          <div class="r" id="emailRow" hidden><div><small>Email</small><span id="emailVal"></span></div><button class="copy" type="button" id="copyBtn">Copy</button></div>
+          <div class="r" id="emailRow" hidden><div><small>Or email</small><span id="emailVal"></span></div><button class="copy" type="button" id="copyBtn">Copy</button></div>
           <a class="r" id="liLink" target="_blank" rel="noopener" hidden><div><small>LinkedIn</small><span id="liVal"></span></div><span aria-hidden="true">↗</span></a>
           <a class="r" id="ghLink" target="_blank" rel="noopener" hidden><div><small>GitHub</small><span id="ghVal"></span></div><span aria-hidden="true">↗</span></a>
-          <a class="btn btn-acc mag" id="book" target="_blank" rel="noopener" hidden>Book a 20-minute call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-acc mag" id="book" target="_blank" rel="noopener" hidden>Book a call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <p class="soon" id="soon" hidden>Contact details are being added.</p>
           <div class="status" id="status" role="status"></div>
         </div>
       </div>
       <form class="cform" id="cform" novalidate>
-        <h3>Send a message</h3>
+        <h3>Discuss an automation project</h3>
         <div class="f2">
-          <div class="fld"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
-          <div class="fld"><label for="cf-email">Your email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="fld"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="fld"><label for="cf-email">Work email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="fld"><label for="cf-topic">What is it about?</label>
-          <select id="cf-topic" name="topic"><option>A project</option><option>A job opportunity</option><option>Booking a call</option><option>Something else</option></select></div>
-        <div class="fld"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="5" required></textarea></div>
+        <div class="fld"><label for="cf-company">Company <span class="opt">(optional)</span></label><input id="cf-company" name="company" type="text" autocomplete="organization"></div>
+        <div class="fld"><label for="cf-workflow">What workflow would you like to improve?</label><textarea id="cf-workflow" name="workflow" rows="4" required></textarea></div>
+        <div class="fld"><label for="cf-context">Timeline or context <span class="opt">(optional)</span></label><input id="cf-context" name="context" type="text"></div>
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-        <button class="btn btn-ink" type="submit" id="cf-send">Send message</button>
+        <button class="btn btn-ink" type="submit" id="cf-send">Send enquiry</button>
         <p class="cf-status" id="cf-status" role="status"></p>
+        <p class="privacy">This form collects your name, work email and message so that I can reply. It is delivered to my inbox by FormSubmit, a third-party form service. Please don't include confidential documents, personal data or passwords.</p>
       </form>
     </div>
   </div>
@@ -788,9 +869,10 @@ footer{padding-block:32px 48px; font-size:.86rem; color:var(--faint)}
 /* ---- Edit your details here ---- */
 const CONTACT = {
   email: "mariyajeyashalma663@gmail.com",
-  booking: "mailto:mariyajeyashalma663@gmail.com?subject=Call%20request&body=Hi%20Mariya%2C%0A%0AI%27d%20like%20to%20book%20a%20call%20about%3A%0A%0AGood%20times%20for%20me%3A%0A",
-  linkedin: "https://www.linkedin.com/in/your-profile",
-  github: "https://github.com/your-username"
+  /* TODO: put a real scheduling link here (Calendly, Cal.com). Left empty on purpose: the button stays hidden until then. */
+  booking: "",
+  linkedin: "https://www.linkedin.com/in/mariyashalma",
+  github: "https://github.com/Mariyashalma"
 };
 /* Live language-tutor app shown in the Lab. Set to "" to hide the button. */
 const LIVE_TUTOR_URL = "";
@@ -799,6 +881,7 @@ const LIVE_TUTOR_URL = "";
   const $ = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let paused = false;
   const fine = matchMedia("(hover:hover) and (pointer:fine)").matches;
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -828,25 +911,44 @@ const LIVE_TUTOR_URL = "";
     const say = (t, cls) => { st.textContent = t; st.className = "cf-status" + (cls ? " " + cls : ""); };
     form.addEventListener("submit", async e => {
       e.preventDefault();
-      const f = form.elements, name = f.name.value.trim(), email = f.email.value.trim(), msg = f.message.value.trim();
+      const f = form.elements, name = f.name.value.trim(), email = f.email.value.trim(), workflow = f.workflow.value.trim();
       const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      f.name.classList.toggle("bad", !name); f.email.classList.toggle("bad", !okEmail); f.message.classList.toggle("bad", !msg);
-      if (!name || !okEmail || !msg){ say(!okEmail && name && msg ? "Please enter a valid email address." : "Please fill in your name, email and message.", "err"); return; }
+      f.name.classList.toggle("bad", !name); f.email.classList.toggle("bad", !okEmail); f.workflow.classList.toggle("bad", !workflow);
+      if (!name || !okEmail || !workflow){ say(!okEmail && name && workflow ? "Please enter a valid email address." : "Please fill in your name, work email and the workflow you'd like to improve.", "err"); return; }
       if (f._honey.value) return;
       send.disabled = true; say("Sending…");
       try {
         const r = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(CONTACT.email), {
           method:"POST", headers:{"Content-Type":"application/json", "Accept":"application/json"},
-          body:JSON.stringify({name, email, topic:f.topic.value, message:msg, _subject:"Portfolio message: " + f.topic.value, _template:"table", _captcha:"false"})
+          body:JSON.stringify({name, email, company:f.company.value.trim() || "(not given)", workflow, context:f.context.value.trim() || "(not given)", _subject:"Automation enquiry from " + name, _template:"table", _captcha:"false"})
         });
         const j = await r.json().catch(() => ({}));
         if (!r.ok || String(j.success) !== "true") throw new Error(j.message || "send failed");
-        form.reset(); say("Message sent. Thank you, I'll reply within one working day.", "ok");
+        form.reset(); say("Enquiry sent. Thank you, I'll reply within one working day.", "ok");
       } catch (err){
-        say("The message could not be sent from this page. Please email " + CONTACT.email + " instead.", "err");
+        say("The enquiry could not be sent from this page. Please email " + CONTACT.email + " instead.", "err");
       } finally { send.disabled = false; }
     });
   })();
+
+  /* ---------- mobile menu ---------- */
+  (function(){
+    const btn = $("#menuBtn"), list = $("#links");
+    const set = open => { list.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); btn.setAttribute("aria-label", open ? "Close menu" : "Open menu"); };
+    btn.addEventListener("click", () => set(!list.classList.contains("open")));
+    list.addEventListener("click", e => { if (e.target.closest("a")) set(false); });
+    addEventListener("keydown", e => { if (e.key === "Escape") set(false); });
+  })();
+
+  /* ---------- pause all automatic motion ---------- */
+  $("#motionBtn").addEventListener("click", () => {
+    paused = !paused;
+    document.documentElement.classList.toggle("paused", paused);
+    const b = $("#motionBtn"); b.textContent = paused ? "Play animation" : "Pause animation"; b.setAttribute("aria-pressed", String(paused));
+  });
+
+  /* ---------- case studies open their demo ---------- */
+  $$(".case-demo").forEach(a => a.addEventListener("click", () => { userPicked = true; show(+a.dataset.demo); }));
 
   /* ---------- theme ---------- */
   const root = document.documentElement;
@@ -869,7 +971,7 @@ const LIVE_TUTOR_URL = "";
   const links = $$("#links a");
   if ("IntersectionObserver" in window){
     const so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }), {rootMargin:"-40% 0px -55% 0px"});
-    ["lab","ds","builds","process","about"].forEach(id => so.observe(document.getElementById(id)));
+    ["services","work","lab","process","about"].forEach(id => so.observe(document.getElementById(id)));
   }
 
   /* ---------- headline: words rise in ---------- */
@@ -1020,7 +1122,7 @@ const LIVE_TUTOR_URL = "";
       });
       ctx.globalAlpha = 1;
     }
-    function loop(now){ if (visible) draw(now); requestAnimationFrame(loop); }
+    function loop(now){ if (visible && !paused) draw(now); requestAnimationFrame(loop); }
     draw(performance.now());
     if (!reduce) requestAnimationFrame(loop);
     else { addEventListener("resize", () => draw(performance.now())); matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => setTimeout(() => draw(performance.now()), 0)); $("#themeBtn").addEventListener("click", () => setTimeout(() => draw(performance.now()), 0)); }
@@ -1045,10 +1147,10 @@ const LIVE_TUTOR_URL = "";
       {t:"Player model", k:"Data science", i:"chart", demo:3},
       {t:"Tamil tutor", k:"Language", i:"chat", demo:4},
       {t:"Kids' language tutor", k:"Language", i:"chat", demo:5},
-      {t:"Wealth app", k:"Client work", i:"home", href:"#builds"},
+      {t:"Wealth app", k:"Client work", i:"home", href:"#work"},
       {t:"Churn prediction", k:"Data science", i:"chart", href:"#ds"},
-      {t:"Regulator reports", k:"Compliance", i:"doc", href:"#builds"},
-      {t:"Risk and controls app", k:"Compliance", i:"shield", href:"#builds"}
+      {t:"Regulator reports", k:"Compliance", i:"doc", href:"#work"},
+      {t:"Risk and controls app", k:"Compliance", i:"shield", href:"#work"}
     ];
     const slots = () => stage.clientWidth < 430
       ? [{x:29,y:34,r:-4},{x:71,y:18,r:4}]
@@ -1067,7 +1169,7 @@ const LIVE_TUTOR_URL = "";
     sl.forEach((slot, k) => { const el = make(P[next++]); place(el, slot, -k * 1.4); el.classList.add("float"); layer.appendChild(el); shown[k] = el; });
     if (reduce) return;
     function pop(){
-      if (document.hidden) return;
+      if (document.hidden || paused) return;
       const k = turn++ % sl.length, slot = sl[k], old = shown[k];
       if (old){ old.classList.remove("float"); old.style.setProperty("--y", (slot.y - 16) + "%"); old.style.setProperty("--o", 0); old.style.setProperty("--s", .9); setTimeout(() => old.remove(), 900); }
       const el = make(P[next++ % P.length]);
@@ -1103,7 +1205,7 @@ const LIVE_TUTOR_URL = "";
         requestAnimationFrame(tick);
       });
     }, {threshold:.5});
-    mo.observe($("#metrics"));
+    if ($("#metrics")) mo.observe($("#metrics"));
   }
 
   /* ---------- reveal ---------- */
@@ -1224,7 +1326,7 @@ const LIVE_TUTOR_URL = "";
     {
       ctx:"Insurance · client work, anonymised", title:"Car-accident claims: who is at fault?",
       problem:"Car-accident forms arrived by email as PDFs and were typed in by hand.",
-      built:"The system reads each form in Dutch or French and sends unclear fields to a person. It then applies the legal rules to work out how much each driver is at fault.",
+      built:"The system reads each form, in more than one language, and sends unclear fields to a person. It then applies the legal rules to work out how much each driver is at fault.",
       stack:["Document Intelligence (custom)","Azure OpenAI","Container Apps Jobs","FastAPI","PostgreSQL","Bicep"],
       bar:"claim C-10482 · accident declaration", dur:9,
       html:`<div class="clm"><ol class="pipe" id="k-pipe">
@@ -1250,9 +1352,9 @@ const LIVE_TUTOR_URL = "";
     {
       ctx:"Compliance · client work, anonymised", title:"Ask a question about EU law",
       problem:"Compliance staff need exact answers from long EU laws, with the article number.",
-      built:"19 EU laws, including GDPR, DORA and the AI Act, are indexed. A question returns the answer together with the article it came from.",
+      built:"Public EU laws, including GDPR, DORA and the AI Act, are indexed. A question returns the answer together with the article it came from.",
       stack:["Azure AI Search","text-embedding-3-large","Python","Azure Functions","React"],
-      bar:"corpus: 19 EU regulations · filter: GDPR", dur:9,
+      bar:"corpus: public EU regulations · filter: GDPR", dur:9,
       html:`<div class="chat" id="c-chat"></div>`,
       Q:"How quickly must we report a personal data breach?",
       A:"Notify the supervisory authority without undue delay and, where feasible, within 72 hours of becoming aware of it, unless the breach is unlikely to result in a risk to people's rights and freedoms.",
@@ -1261,7 +1363,7 @@ const LIVE_TUTOR_URL = "";
         const u = document.createElement("div"); u.className = "bub u"; ch.appendChild(u);
         for (let i = 1; i <= this.Q.length; i++){ if (!alive()) return; u.textContent = this.Q.slice(0,i); await sleep(24); }
         await sleep(300); if (!alive()) return;
-        const th = document.createElement("div"); th.className = "thinking"; th.innerHTML = '<span class="spinner"></span>searching 19 regulations…'; ch.appendChild(th);
+        const th = document.createElement("div"); th.className = "thinking"; th.innerHTML = '<span class="spinner"></span>searching the regulations…'; ch.appendChild(th);
         const ck = document.createElement("div"); ck.className = "chunks";
         ck.innerHTML = `<div class="chunk"><b>Art. 33(1)</b>…notify the supervisory authority without undue delay and, where feasible, not later than 72 hours after having become aware of it…<span class="sc">score 0.91</span></div>
           <div class="chunk"><b>Art. 34(1)</b>…communicate the personal data breach to the data subject without undue delay…<span class="sc">score 0.74</span></div>
@@ -1341,8 +1443,8 @@ const LIVE_TUTOR_URL = "";
     if (reduce || !labVisible){ d.still(); return; }
     if (!userPicked){ tabs[i].style.setProperty("--dur", d.dur + "s"); void tabs[i].offsetWidth; tabs[i].classList.add("timing"); }
     d.run(alive).then(() => {
-      if (!alive() || userPicked) return;
-      autoTimer = setTimeout(() => { if (alive() && !userPicked) show((cur + 1) % DEMOS.length); }, 2600);
+      if (!alive() || userPicked || paused) return;
+      autoTimer = setTimeout(() => { if (alive() && !userPicked && !paused) show((cur + 1) % DEMOS.length); }, 2600);
     });
   }
   tabs.forEach((t,i) => {
